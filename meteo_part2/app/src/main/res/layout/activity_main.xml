@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="meteo"
+            type="dali.hamza.meteo_part2.model.Meteo" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MeteoActivity">
+
+        <TextView
+            android:id="@+id/id_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:text="@{meteo.city}"
+            app:layout_constraintEnd_toEndOf="@+id/citylabel"
+            app:layout_constraintStart_toStartOf="@+id/citylabel"
+            app:layout_constraintTop_toBottomOf="@+id/citylabel" />
+
+
+        <TextView
+            android:id="@+id/citylabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:text="City"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:imagedrawable="@{meteo.temperature}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_remove_black_24dp" />
+
+        <TextView
+            android:id="@+id/id_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@{String.valueOf(meteo.temperature)}"
+            app:layout_constraintEnd_toEndOf="@+id/weather_icon"
+            app:layout_constraintStart_toStartOf="@+id/weather_icon"
+            app:layout_constraintTop_toBottomOf="@+id/weather_icon" />
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="+"
+            android:onClick="modif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/id_temperature" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
