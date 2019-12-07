@@ -64,6 +64,13 @@ public class MainVIewModel extends AndroidViewModel {
         cartMutableLiveData.setValue(c);
     }
 
+
+    void setListTicket(Ticket t){
+        ArrayList<Ticket> list=ticketsLiveData.getValue();
+        list.set(0,t);
+        ticketsMutableLiveData.setValue(list);
+    }
+
     public void setMutableLiveDataMessage(String msg) {
         mutableLiveDataMessage.setValue(msg);
     }

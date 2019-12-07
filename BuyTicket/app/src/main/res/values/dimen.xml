@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="textidticket">22sp</dimen>
-    <dimen name="textdateticket">16sp</dimen>
-    <dimen name="textpriceticket">17sp</dimen>
-    <dimen name="textTotalticket">15sp</dimen>
-</resources>
